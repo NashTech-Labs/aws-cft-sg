@@ -245,20 +245,7 @@ Resources:
                 - IpProtocol: tcp
                   FromPort: 80
                   ToPort: 80
-                  SourceSecurityGroupId:
-                      Ref: ELBSecurityGroup
 
-    ELBSecurityGroup:
-        Type: AWS::EC2::SecurityGroup
-        Properties:
-            GroupDescription: 'SSH and Port 80'
-            VpcId:
-              Ref: VPC
-            SecurityGroupIngress:
-                - IpProtocol: tcp
-                  FromPort: 80
-                  ToPort: 80
-                  CidrIp: 0.0.0.0/0
                 
 Outputs:
 
